@@ -19,7 +19,10 @@ export default {};
 span {
   background-color: #21d4fd;
   background-image: linear-gradient(-50deg, #21d4fd 0%, #b721ff 100%);
-  padding: 1px 3px;
+  padding: 0 4px;
+  padding-top: 3px;
   border-radius: 50%;
+  width:20px;
+  height: 20px;
 }
 </style>

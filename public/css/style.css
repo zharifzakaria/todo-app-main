@@ -95,6 +95,13 @@ header img {
   padding: 1.25em;
   border-bottom: 1px solid #d2d3db;
   color: #484b6a;
+  position: relative;
+}
+
+.todos ul li input[type='checkbox'] {
+  position: absolute;
+  left: 1.25em;
+  opacity: 0;
 }
 
 .todos ul li:first-child {

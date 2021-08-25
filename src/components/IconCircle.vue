@@ -20,7 +20,7 @@ export default {};
 <style>
 .input-circle {
   position: absolute;
-  left: .85em;
+  left: 1em;
   top:.75em;
 }
 </style>
