@@ -1,38 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-  
-  <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Todo app</title>
 
-  <header>
-    <h1>Todo</h1>
-    <img src="/images/icon-moon.svg" alt="switch to dark">
-  </header>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Todo</h1>
+      <img src="/images/icon-moon.svg" alt="switch to dark" />
+    </header>
 
-  <section class="input">
-    <input type="text" placeholder="Create a new todo..">
-  </section>
+    <section class="input">
+      <img src="./images/icon-circle.svg" alt="uncheck" />
+      <input type="text" placeholder="Create a new todo.." />
+    </section>
 
-  <section class="todos"></section>
+    <section class="todos">
+      <ul>
+        <li class="complete">
+          <img src="./images/icon-circle.svg" alt="uncheck" />
+          <input type="checkbox" class="sr-only" />
+          <p>Complete online Javascript course</p>
+          <img src="./images/icon-cross.svg" alt="delete" />
+        </li>
+        <li>
+          <img src="./images/icon-circle.svg" alt="uncheck" />
+          <input type="checkbox" class="sr-only" />
+          <p>Jog around the park 3x</p>
+          <img src="./images/icon-cross.svg" alt="delete" />
+        </li>
+        <li>
+          <img src="./images/icon-circle.svg" alt="uncheck" />
+          <input type="checkbox" class="sr-only" />
+          <p>10 minutes meditation</p>
+          <img src="./images/icon-cross.svg" alt="delete" />
+        </li>
+        <li>
+          <img src="./images/icon-circle.svg" alt="uncheck" />
+          <input type="checkbox" class="sr-only" />
+          <p>Read for 1 hour</p>
+          <img src="./images/icon-cross.svg" alt="delete" />
+        </li>
+        <li>
+          <img src="./images/icon-circle.svg" alt="uncheck" />
+          <input type="checkbox" class="sr-only" />
+          <p>Pick up groceries</p>
+          <img src="./images/icon-cross.svg" alt="delete" />
+        </li>
+        <li>
+          <img src="./images/icon-circle.svg" alt="uncheck" />
+          <input type="checkbox" class="sr-only" />
+          <p>Complete Todo App on Frontend Mentor</p>
+          <img src="./images/icon-cross.svg" alt="delete" />
+        </li>
+        <li>
+          <p>5 items left</p>
+          <p>Clear Completed</p>
+        </li>
+      </ul>
+    </section>
 
-  <!-- items left -->
-<!-- 
+    <section class="filter">
+      <ul>
+        <li class="active">All</li>
+        <li>Active</li>
+        <li>Completed</li>
+      </ul>
+
+      <p class="instructions">Drag and drop to reorder list</p>
+    </section>
+
+    <!-- items left -->
+    <!-- 
   All
   Active 
   Completed
@@ -41,9 +108,9 @@
 
   Drag and drop to reorder list -->
 
-  <!-- <div class="attribution">
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-</body>
+  </body>
 </html>

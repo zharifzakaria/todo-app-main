@@ -1,11 +1,19 @@
 .input {
     display: flex;
+    position: relative;
 
+    img {
+        position: absolute;
+        padding: 0.825em;
+
+    }
+    
     input {
         flex: 1;
         border: none;
         padding: 1.25em 0;
-        padding-left: 3.25em;
-        border-radius: 5px;
+        padding-left: 3.5em;
+        border-radius: $borderRadius;
+        font-family: $primaryfont;
     }
 }

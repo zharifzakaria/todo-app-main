@@ -1,0 +1,37 @@
+.filter {
+  margin-top: 1em;
+  font-family: $primaryfont;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    list-style-type: none;
+    background-color: white;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+    -webkit-box-shadow: 0px 9px 50px -10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 9px 50px -10px rgba(0, 0, 0, 0.25);
+
+    li {
+      padding: 1.25em;
+      font-size: $li;
+      font-weight: $bold;
+      color: $darkgrayblue;
+
+      &.active {
+        color: $brightblue;
+      }
+    }
+  }
+
+  .instructions {
+    margin-top: 2em;
+    font-size: $li;
+    color: $verydarkgrayblue;
+    text-align: center;
+  }
+}
