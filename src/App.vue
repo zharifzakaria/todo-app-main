@@ -20,14 +20,14 @@
         <IconCircle v-show="!item.complete" />
         <IconCheck v-show="item.complete"/>
         <input type="checkbox" v-model="item.complete" :checked="item.complete"/>
-        <p>{{ item.label }}</p>
+        <p :class="{ completed: item.complete }">{{ item.label }}</p>
         <IconDelete />
       </li>
       <li>
         <p v-show="currentView === 'All'">{{ allTasksLength }} items left</p>
         <p v-show="currentView === 'Active'">{{ activeTasksLength }} items left</p>
         <p v-show="currentView === 'Completed'">{{ completedTasksLength }} items left</p>
-        <p>Clear Completed</p>
+        <p @click="clearCompleted">Clear Completed</p>
       </li>
     </ul>
   </section>
@@ -60,11 +60,39 @@ export default {
     const state = reactive({
       currentView: 'All',
       newTaskInput: "",
-      taskList: [{
-        label: "Milk",
-        complete: false
-      }],
+      taskList: [
+        {
+          label: "Complete online Javascript course",
+          complete: false
+        },
+        {
+          label: "Jog around the park 3x",
+          complete: false
+        },
+        {
+          label: "10 minutes meditation",
+          complete: false
+        },
+        {
+          label: "Read for 1 hour",
+          complete: false
+        },
+        {
+          label: "Pick up groceries",
+          complete: false
+        },
+        {
+          label: "Complete Todo App on Frontend Mentor",
+          complete: false
+        },
+      ],
     });
+
+    const clearCompleted = () => {
+      Array.from( state.taskList.filter(item => item.complete === true), (index) => {
+        state.taskList.splice(index, 1);
+      });
+    };
 
     const taskViews = reactive({
       allTasksLength: computed(() => {
@@ -109,15 +137,9 @@ export default {
       taskInView,
       taskViews,
       setView,
+      clearCompleted,
     };
   },
 };
-
-// Complete online Javascript course
-// Jog around the park 3x
-// 10 minutes meditation
-// Read for 1 hour
-// Pick up groceries
-// Complete Todo App on Frontend Mentor
 
 </script>
