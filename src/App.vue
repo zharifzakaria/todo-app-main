@@ -1,13 +1,84 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <header>
+      <h1>Todo</h1>
+      <img src="/images/icon-moon.svg" alt="switch to dark" />
+    </header>
+
+    <section class="input">
+      <IconCircle class="input-circle" />
+      <input type="text" placeholder="Create a new todo.." />
+    </section>
+
+    <section class="todos">
+      <ul>
+        <li class="complete">
+          <IconCircle />
+          <input type="checkbox" class="sr-only" />
+          <p>Complete online Javascript course</p>
+          <IconDelete />
+        </li>
+        <li>
+          <IconCircle />
+          <input type="checkbox" class="sr-only" />
+          <p>Jog around the park 3x</p>
+          <IconDelete />
+        </li>
+        <li>
+          <IconCircle />
+          <input type="checkbox" class="sr-only" />
+          <p>10 minutes meditation</p>
+          <IconDelete />
+        </li>
+        <li>
+          <IconCircle />
+          <input type="checkbox" class="sr-only" />
+          <p>Read for 1 hour</p>
+          <IconDelete />
+        </li>
+        <li>
+          <IconCircle />
+          <input type="checkbox" class="sr-only" />
+          <p>Pick up groceries</p>
+          <IconDelete />
+        </li>
+        <li>
+          <IconCircle />
+          <input type="checkbox" class="sr-only" />
+          <p>Complete Todo App on Frontend Mentor</p>
+          <IconDelete />
+        </li>
+        <li>
+          <p>5 items left</p>
+          <p>Clear Completed</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="filter">
+      <ul>
+        <li class="active">All</li>
+        <li>Active</li>
+        <li>Completed</li>
+      </ul>
+
+      <p class="instructions">Drag and drop to reorder list</p>
+    </section>
 </template>
 
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import IconCircle from './components/IconCircle.vue';
+import IconCheck from './components/IconCheck.vue';
+import IconDelete from './components/IconDelete.vue';
 
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
+export default {
+  name: 'App',
+  components: {
+    IconCircle,
+    IconCheck,
+    IconDelete,
+  }
+}
+
 </script>
 
 <style>
